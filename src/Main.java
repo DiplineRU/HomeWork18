@@ -1,17 +1,39 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.*;
+
 public class Main {
+
+    private static final List<Integer> nums = new ArrayList<>(List.of(1,2,3,4,5,6,7));
+    private static final List<String> words = new ArrayList<>(List.of(abc,abc,bcd,bcd,e));
+
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    task1();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+    }
+    public static void task1(){
+        for (int num : nums){
+            if (num % 2 != 0){
+                System.out.println(num);
+            }
         }
+    }
+    public static void task2(){
+        Collections.sort(nums);
+        int prevNum = Integer.MIN_VALUE;
+
+        for (int num : nums){
+            if (num % 2 = 0 && num != prevNum) {
+                System.out.println(num);
+                prevNum = num;
+            }
+        }
+    }
+    public static void task3(){
+        Set<String> uniqueWords = new HashSet<>(words);
+        System.out.println(uniqueWords);
+    }
+
+    public static void task4(){
+        Set<String> uniqueWords = new HashSet<>(words);
+        System.out.println(words.size() - uniqueWords.size());
     }
 }
