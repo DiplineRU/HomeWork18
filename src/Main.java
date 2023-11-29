@@ -3,7 +3,7 @@ import java.util.*;
 public class Main {
 
     private static final List<Integer> nums = new ArrayList<>(List.of(1,2,3,4,5,6,7));
-    private static final List<String> words = new ArrayList<>(List.of(abc,abc,bcd,bcd,e));
+    private static final List<String> words = new ArrayList<>(List.of("abc","abc","bcd","bcd", "e"));
 
     public static void main(String[] args) {
     task1();
@@ -21,7 +21,7 @@ public class Main {
         int prevNum = Integer.MIN_VALUE;
 
         for (int num : nums){
-            if (num % 2 = 0 && num != prevNum) {
+            if (num % 2 == 0 && num != prevNum) {
                 System.out.println(num);
                 prevNum = num;
             }
